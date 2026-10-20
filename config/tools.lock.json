@@ -1,0 +1,17 @@
+[
+  {
+    "file": "morphe.jar",
+    "url": "https://github.com/MorpheApp/morphe-desktop/releases/download/v1.18.1/morphe-desktop-1.18.1-all.jar",
+    "sha256": "1b506ab5f03d16a2f65026d5e0e1910d01fc1e2152f21eaeb44ed2f30856597b"
+  },
+  {
+    "file": "patches.mpp",
+    "url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.48.0-dev.15/patches-1.48.0-dev.15.mpp",
+    "sha256": "7126aa53389d960c5312a6ee73ba1979b8dfa303386f6c5f8d35107cf5cb913c"
+  },
+  {
+    "file": "apktool.jar",
+    "url": "https://github.com/iBotPeaches/Apktool/releases/download/v3.0.3/apktool_3.0.3.jar",
+    "sha256": "dbf930b076c6b9be08d57c449cacefc3bdd6b71ebd59b3066fc0e1f5b14f9423"
+  }
+]

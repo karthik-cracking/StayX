@@ -1,0 +1,17 @@
+# Private inputs, signing material, generated artifacts
+.tools/
+build/
+dist/
+.venv/
+__pycache__/
+*.pyc
+*.apk
+*.apkm
+*.aab
+*.idsig
+*.p12
+*.jks
+*.keystore
+.env
+.env.*
+.private/
