@@ -10,9 +10,18 @@ public struct CrashlyticsLogger: Sendable {
     init(subsystem: String = appSubsystem, category: String) {
         logger = Logger(subsystem: subsystem, category: category)
     }
-    func notice(_ message: @autoclosure () -> String) { logger.notice("\(message(), privacy: .private)") }
-    func error(_ message: @autoclosure () -> String) { logger.error("\(message(), privacy: .private)") }
-    func debug(_ message: @autoclosure () -> String) { logger.debug("\(message(), privacy: .private)") }
+    func notice(_ message: @autoclosure () -> String) {
+        let value = message()
+        logger.notice("\(value, privacy: .private)")
+    }
+    func error(_ message: @autoclosure () -> String) {
+        let value = message()
+        logger.error("\(value, privacy: .private)")
+    }
+    func debug(_ message: @autoclosure () -> String) {
+        let value = message()
+        logger.debug("\(value, privacy: .private)")
+    }
     func recordNonFatal(_ error: Error, userInfo: [String: String] = [:]) {
         logger.error("\(error.localizedDescription, privacy: .private)")
     }
