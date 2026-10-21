@@ -1,0 +1,29 @@
+name: StayX iOS
+on:
+  push:
+    branches: [ios]
+    paths: ['ios/**', '.github/workflows/ios.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: stayx-ios-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: macos-26
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build tools
+        run: brew install xcodegen just
+      - name: Build IPA and run simulator smoke test
+        working-directory: ios
+        run: just ci
+      - name: Upload build and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: StayX-iOS-build
+          path: ios/out/
+          retention-days: 7
