@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/milika/SmartTubeIOS",
+  "commit": "e659ce9268c02857fb3769cc2aa2e0efc516e36e",
+  "license": "GPL-3.0",
+  "modifications": [
+    "StayX app target and branding",
+    "ENABLE_DOWNLOADS in both Swift package targets",
+    "Native iOS player default with embedded fallback setting",
+    "Optional SponsorBlock disabled by default",
+    "Firebase removed; device-local logging",
+    "No App Groups, iCloud, or extension entitlements in personal build"
+  ]
+}

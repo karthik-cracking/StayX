@@ -1,0 +1,10 @@
+build/
+out/
+*.xcodeproj/
+.DS_Store
+*.ipa
+*.p12
+*.mobileprovision
+*.xcuserstate
+.build/
+.swiftpm/
