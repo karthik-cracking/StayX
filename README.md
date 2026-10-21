@@ -12,6 +12,12 @@
 
 **StayX is an independent customization project.** This repository publishes the build scripts, branding assets, configuration, and custom modifications used to create StayX. It is not the original YouTube source code and is not affiliated with Google, YouTube, Morphe, ReVanced, or YTDLnis.
 
+## iPhone customization
+
+The working personal iPhone customization is available under [ios-customization](ios-customization/README.md), with the [installation and friend-sharing guide](ios-customization/SHARING.md). It keeps YouTube's original icon, interface, and fullscreen player, adds the StayX app name, and corrects stale extension metadata in the pinned upstream input. Installation and sampled playback/download tests passed on one iPhone 12 running iOS 26.5.
+
+The public iOS package contains the customization script and documentation. Supply the matching upstream IPA separately and sign it for each phone using the owner's Apple account. The `ios` branch holds an earlier native prototype with different interface/playback behavior. Android instructions continue below.
+
 ## What you can control
 
 | Feature | Control |

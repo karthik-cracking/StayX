@@ -8,6 +8,12 @@ __pycache__/
 *.apk
 *.apkm
 *.aab
+*.ipa
+*.mobileprovision
+*.p8
+*.pfx
+*.key
+*.pem
 *.idsig
 *.p12
 *.jks
