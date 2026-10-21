@@ -177,7 +177,10 @@ public struct AppSettings: Codable {
     /// Opt-in experiment — has no effect on tvOS.
     public var useTOSPlayerOnMac: Bool
 
-    // Note: there is no `useTOSPlayerOnIOS` setting. The TOS-compliant player is
+    /// StayX personal-build choice. False selects the native iOS pipeline.
+    public var useOfficialPlayerOnIOS: Bool
+
+    // Upstream note (StayX adds the persisted choice above): the TOS-compliant player is
     // always used on iOS (PlayerRouter.open(), gated #if os(iOS)) — see
     // SettingsStore.useTOSPlayerOnIOS, which is a non-persisted, hardcoded-true
     // property (overridable only by UI test launch arguments). It has no effect
@@ -313,6 +316,7 @@ public struct AppSettings: Codable {
         audioOnlyMode = false
         preferH264 = false
         iCloudSyncEnabled = false
+        useOfficialPlayerOnIOS = false
         #if os(macOS)
         useTOSPlayerOnMac = true
         #else
@@ -391,6 +395,7 @@ extension AppSettings {
         case preferH264
         case iCloudSyncEnabled
         case useTOSPlayerOnMac
+        case useOfficialPlayerOnIOS
     }
 
     public init(from decoder: Decoder) throws {
@@ -458,5 +463,6 @@ extension AppSettings {
         preferH264 = c.safeDecode(Bool.self, forKey: .preferH264, default: d.preferH264)
         iCloudSyncEnabled = c.safeDecode(Bool.self, forKey: .iCloudSyncEnabled, default: d.iCloudSyncEnabled)
         useTOSPlayerOnMac = c.safeDecode(Bool.self, forKey: .useTOSPlayerOnMac, default: d.useTOSPlayerOnMac)
+        useOfficialPlayerOnIOS = c.safeDecode(Bool.self, forKey: .useOfficialPlayerOnIOS, default: false)
     }
 }

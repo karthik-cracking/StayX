@@ -32,8 +32,9 @@ public final class SettingsStore {
     /// mini player, PIP, DASH switching, etc.) opt out via
     /// `--uitesting-disable-tos-player-on-ios`. Has no effect on macOS or tvOS —
     /// PlayerRouter (the only reader) is `#if os(iOS)`.
-    public var useTOSPlayerOnIOS: Bool = UserDefaults.standard.bool(forKey: "stayx_official_player") {
-        didSet { UserDefaults.standard.set(useTOSPlayerOnIOS, forKey: "stayx_official_player") }
+    public var useTOSPlayerOnIOS: Bool {
+        get { settings.useOfficialPlayerOnIOS }
+        set { settings.useOfficialPlayerOnIOS = newValue }
     }
 
     private static let key = "stayx_app_settings"
