@@ -23,6 +23,11 @@ manifest.set('{'+android+'}versionName','1.0.0-tv')
 manifest.set('{'+android+'}versionCode','1000001')
 app=manifest.find('application');app.set('{'+android+'}label','StayX')
 app.set('{'+android+'}debuggable','false')
+# Android 11+ filters package lookups unless the companion is declared visible.
+queries=manifest.find('queries')
+if queries is None:queries=ET.SubElement(manifest,'queries')
+if not any(p.get('{'+android+'}name')=='com.deniscerri.ytdl' for p in queries.findall('package')):
+    ET.SubElement(queries,'package',{'{'+android+'}name':'com.deniscerri.ytdl'})
 for item in list(manifest.findall('uses-permission')):
     if item.get('{'+android+'}name')=='android.permission.REQUEST_INSTALL_PACKAGES':manifest.remove(item)
 tree.write(decoded/'AndroidManifest.xml',encoding='utf-8',xml_declaration=True)
@@ -75,7 +80,7 @@ for path in decoded.glob('res/drawable*/app_banner*'):
 (decoded/'assets/stayx-runtime.js').write_bytes(args.runtime.read_bytes())
 
 old=b'https://cdn.jsdelivr.net/npm/@foxreis/tizentube/dist/userScript.js'
-new=b'https://cdn.jsdelivr.net/gh/karthik-cracking/StayX@tv4/tv.js?s=tv1'
+new=b'https://cdn.jsdelivr.net/gh/karthik-cracking/StayX@tv5/tv.js?s=tv1'
 assert len(old)==len(new)
 patched=[]
 for path in decoded.glob('lib/*/libchrobalt.so'):

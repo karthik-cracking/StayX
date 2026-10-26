@@ -47,7 +47,7 @@ For ARM64, change `--abi arm64`, supply `cobalt-arm64.apk` and use new output/bu
 
 The script rejects mismatched upstream/artwork hashes and existing build/output paths. It performs a fresh APKtool decode, applies pinned modifications, compiles **all** Java classes (including anonymous classes), runs D8, appends the bridge as `classes4.dex`, builds/aligns/signs the APK, then verifies its signature and alignment. It writes a SHA-256 sidecar and a build report. Use the same private signing key for future updates to your installed build; a different key does not update an existing installation. APK output need not be byte-for-byte reproducible across signing keys or tool versions.
 
-The native loader URL is an equal-length replacement pinned to the immutable `tv2` runtime tag. A guarded copy of that runtime is also bundled as `assets/stayx-runtime.js` and injected after the TV interface initializes, so an unavailable script CDN does not leave the StayX menu missing. To change the hosted runtime version, review the pinned URL in `patch_tv_apk.py`, keep its native-string length constraint and build/test a new APK. Do not silently move an existing runtime tag.
+The native loader URL is an equal-length replacement pinned to the immutable `tv5` runtime tag. A guarded copy of that runtime is also bundled as `assets/stayx-runtime.js` and injected after the TV interface initializes, so an unavailable script CDN does not leave the StayX menu missing. To change the hosted runtime version, review the pinned URL in `patch_tv_apk.py`, keep its native-string length constraint and build/test a new APK. Do not silently move an existing runtime tag.
 
 ## Optional download helper
 

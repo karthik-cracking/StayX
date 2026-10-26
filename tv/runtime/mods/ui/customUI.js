@@ -103,7 +103,7 @@ function applyPatches() {
         if (engagementActionButton) {
             const originalDownloadActions = inst[engagementActionButton];
             inst[engagementActionButton] = function () {
-                const result = originalDownloadActions.apply(this, arguments);
+                const result = originalDownloadActions.apply(this, arguments).filter(item => item.button?.buttonRenderer?.command?.customAction?.action !== 'STAYX_DOWNLOAD');
                 if (configRead('enableDownloads')) {
                     result.push({
                         type: 'TRANSPORT_CONTROLS_BUTTON_TYPE_FEATURED_ACTION',

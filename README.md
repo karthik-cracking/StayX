@@ -12,6 +12,10 @@
 
 **StayX is an independent customization project.** This repository publishes the build scripts, branding assets, configuration, and custom modifications used to create StayX. It is not the original YouTube source code and is not affiliated with Google, YouTube, Morphe, ReVanced, or YTDLnis.
 
+## Android TV and Fire TV
+
+[StayX TV](tv/README.md) keeps YouTube's TV interface and fullscreen controls using TizenTube Cobalt, with StayX settings, ad-block controls and an optional local-download handoff to YTDLnis. ARM32 playback/settings and a completed download were tested on Fire OS 7.7.1.7. ARM64 is built but awaits device testing. The TV guide includes installation, feature limits and the complete customization/build source.
+
 ## iPhone customization
 
 The working personal iPhone customization is available under [ios-customization](ios-customization/README.md), with the [installation and friend-sharing guide](ios-customization/SHARING.md). It keeps YouTube's original icon, interface, and fullscreen player, adds the StayX app name, and corrects stale extension metadata in the pinned upstream input. Installation and sampled playback/download tests passed on one iPhone 12 running iOS 26.5.
