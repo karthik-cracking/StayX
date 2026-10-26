@@ -75,7 +75,7 @@ for path in decoded.glob('res/drawable*/app_banner*'):
 (decoded/'assets/stayx-runtime.js').write_bytes(args.runtime.read_bytes())
 
 old=b'https://cdn.jsdelivr.net/npm/@foxreis/tizentube/dist/userScript.js'
-new=b'https://cdn.jsdelivr.net/gh/karthik-cracking/StayX@tv2/tv.js?s=tv1'
+new=b'https://cdn.jsdelivr.net/gh/karthik-cracking/StayX@tv4/tv.js?s=tv1'
 assert len(old)==len(new)
 patched=[]
 for path in decoded.glob('lib/*/libchrobalt.so'):

@@ -6,6 +6,6 @@ Build with Node.js and npm: run `npm ci --ignore-scripts` and `npm run build` in
 
 StayX adds an optional remote-player download button, a validated native download-helper action, settings branding, optional-feature defaults, a Menu-key settings entry, and disables the incompatible upstream APK updater. Downloading uses the separately installed YTDLnis helper; it is not a built-in downloader engine.
 
-The app loads this bundled script from the immutable tv1 tag over the existing jsDelivr host allowed by the Cobalt runtime. The runtime itself does not load a second upstream userscript.
+The app includes a local copy and also requests this same script from the immutable tv4 tag over the existing jsDelivr host allowed by the Cobalt runtime. The runtime itself does not load a second upstream userscript.
 
-TV device validation is in progress; results will be documented on the main branch.
+ARM32 testing on Fire OS 7.7.1.7 confirmed fullscreen playback, StayX settings, and a completed local video/audio download through YTDLnis. See ../README.md for scope and limits. ARM64 is not device-tested.
