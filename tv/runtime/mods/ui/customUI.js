@@ -67,19 +67,6 @@ function applyPatches() {
 
         if (!settingActionGroup) return inst;
 
-        if (configRead('enableDownloads')) {
-            const originalDownloadGroup = inst[settingActionGroup];
-            inst[settingActionGroup] = function () {
-                const result = originalDownloadGroup.apply(this, arguments);
-                if (!result.find(item => item.type === 'TRANSPORT_CONTROLS_BUTTON_TYPE_DOWNLOAD')) {
-                    result.splice(Math.max(0, result.findIndex(item => item.type === 'TRANSPORT_CONTROLS_BUTTON_TYPE_PLAYBACK_SETTINGS')), 0, {
-                        type: 'TRANSPORT_CONTROLS_BUTTON_TYPE_DOWNLOAD',
-                        button: { buttonRenderer: ButtonRenderer(false, 'Download video', 'DOWNLOAD', { customAction: { action: 'STAYX_DOWNLOAD' } }) }
-                    });
-                }
-                return result;
-            };
-        }
         const origSettingActionGroup = inst[settingActionGroup];
         if (configRead('enableMPButton')) {
             inst[settingActionGroup] = function () {
@@ -111,6 +98,21 @@ function applyPatches() {
         }).left.split('.')[1];
 
         const engagementActionButton = functions.find(func => func.rhs.includes('props.data.engagementActions')).left.split('.')[1];
+
+        // Use a transport type the current TV client already renders.
+        if (engagementActionButton) {
+            const originalDownloadActions = inst[engagementActionButton];
+            inst[engagementActionButton] = function () {
+                const result = originalDownloadActions.apply(this, arguments);
+                if (configRead('enableDownloads')) {
+                    result.push({
+                        type: 'TRANSPORT_CONTROLS_BUTTON_TYPE_FEATURED_ACTION',
+                        button: { buttonRenderer: ButtonRenderer(false, 'Download video', 'DOWNLOAD', { customAction: { action: 'STAYX_DOWNLOAD' } }) }
+                    });
+                }
+                return result;
+            };
+        }
 
         if (engagementActionButton && configRead('enableSpeedControlsButton')) {
             const origEngagementActionButton = inst[engagementActionButton];
