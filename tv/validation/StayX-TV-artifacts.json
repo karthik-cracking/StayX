@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0-tv",
+  "package": "com.stayx.tv",
+  "runtime_tag": "tv5",
+  "files": [
+    {
+      "name": "StayX-TV-1.0.0-arm.apk",
+      "sha256": "9bf1d8ed3ec1e9f46f190043b0afb2c8f01ff706b63b43e2a996a8aea5ed676a",
+      "bytes": 80666091,
+      "device_tested": true
+    },
+    {
+      "name": "StayX-TV-1.0.0-arm64.apk",
+      "sha256": "41dfe178f5073efefaaf787b90676b11b30c6143313afe4fa1f13bab7fb0e0b6",
+      "bytes": 153136615,
+      "device_tested": false
+    }
+  ]
+}

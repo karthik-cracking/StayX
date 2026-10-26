@@ -4,6 +4,8 @@ StayX TV keeps YouTube's TV interface, search, Shorts shelves and fullscreen rem
 
 ## Install
 
+Download the APKs and source backup from the [StayX TV 1.0.0 experimental release](https://github.com/karthik-cracking/StayX/releases/tag/tv-v1.0.0).
+
 Choose the APK for the device's **Android ABI**, not just its processor hardware:
 
 | APK | Device |

@@ -1,0 +1,17 @@
+{
+  "ro.product.model": "AFTSSS",
+  "ro.product.manufacturer": "Amazon",
+  "ro.product.cpu.abilist": "armeabi-v7a,armeabi",
+  "ro.build.version.sdk": "28",
+  "ro.build.version.release": "9",
+  "ro.build.version.name": "Fire OS 7.7.1.7 (PS7717/5741)",
+  "features": [
+    "feature:android.hardware.type.television",
+    "feature:android.software.leanback",
+    "feature:android.software.leanback_only",
+    "feature:android.software.picture_in_picture"
+  ],
+  "existing_related_packages": [
+    "package:com.amazon.firetv.youtube"
+  ]
+}

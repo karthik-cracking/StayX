@@ -1,0 +1,28 @@
+{
+  "test_video": "jNQXAC9IVRw",
+  "saved_on_device": "/sdcard/Download/YTDLnis/Video/jawed - Me at the zoo.webm",
+  "sha256": "73a04b01377ec1179a680c419d87356a907e33c9ada35c4ce42d09bdc32449f1",
+  "media": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "av1",
+        "codec_type": "video",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "codec_name": "opus",
+        "codec_type": "audio"
+      }
+    ],
+    "format": {
+      "duration": "19.028000",
+      "size": "475307"
+    }
+  },
+  "full_audio_video_decode_passed": true,
+  "extractor_note": "On this first-run ARM32 test extraction took several minutes. Queue required Resume all once. No speed guarantee.",
+  "on_device_local_playback": "Observed in VLC VideoPlayerActivity; saved file played to 12 of 19 seconds."
+}

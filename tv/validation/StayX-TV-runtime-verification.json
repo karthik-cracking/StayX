@@ -1,0 +1,8 @@
+{
+  "url": "https://cdn.jsdelivr.net/gh/karthik-cracking/StayX@tv5/tv.js?s=tv1",
+  "http_status": 200,
+  "sha256": "57826d2e12ab4b3ca9efa90c279caf0fdf9f28ced0e8959c91081963c26f61a8",
+  "bytes": 692285,
+  "matches_repository_bundle": true,
+  "bundled_fallback_in_apk": true
+}

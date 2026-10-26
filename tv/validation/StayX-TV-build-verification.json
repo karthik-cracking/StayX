@@ -1,0 +1,30 @@
+[
+  {
+    "abi": "arm",
+    "manifest_query_present": true,
+    "manifest_query_evidence": "            A: http://schemas.android.com/apk/res/android:required(0x0101028e)=false\n      E: queries (line=114)\n          E: package (line=114)\n            A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"com.deniscerri.ytdl\" (Raw: \"com.deniscerri.ytdl\")",
+    "runtime_sha256": "57826d2e12ab4b3ca9efa90c279caf0fdf9f28ced0e8959c91081963c26f61a8",
+    "runtime_and_bridge_match": true,
+    "loader_tv5_occurrences": {
+      "lib/armeabi-v7a/libchrobalt.so": 2
+    },
+    "sha256": "9bf1d8ed3ec1e9f46f190043b0afb2c8f01ff706b63b43e2a996a8aea5ed676a",
+    "signature_v2_v3_verified": true,
+    "zipalign_verified": true,
+    "device_tested_by_this_command": false
+  },
+  {
+    "abi": "arm64",
+    "manifest_query_present": true,
+    "manifest_query_evidence": "            A: http://schemas.android.com/apk/res/android:required(0x0101028e)=false\n      E: queries (line=114)\n          E: package (line=114)\n            A: http://schemas.android.com/apk/res/android:name(0x01010003)=\"com.deniscerri.ytdl\" (Raw: \"com.deniscerri.ytdl\")",
+    "runtime_sha256": "57826d2e12ab4b3ca9efa90c279caf0fdf9f28ced0e8959c91081963c26f61a8",
+    "runtime_and_bridge_match": true,
+    "loader_tv5_occurrences": {
+      "lib/arm64-v8a/libchrobalt.so": 2
+    },
+    "sha256": "41dfe178f5073efefaaf787b90676b11b30c6143313afe4fa1f13bab7fb0e0b6",
+    "signature_v2_v3_verified": true,
+    "zipalign_verified": true,
+    "device_tested_by_this_command": false
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "installed_apk_sha256": "9bf1d8ed3ec1e9f46f190043b0afb2c8f01ff706b63b43e2a996a8aea5ed676a",
+  "matches_published_arm_apk": true,
+  "player_download_button_visible_once": true,
+  "remote_focus_and_activation_observed": true,
+  "toggle_off_removes_button": true,
+  "toggle_on_restores_button": true,
+  "final_download_setting": "enabled",
+  "arm64_device_tested": false
+}
