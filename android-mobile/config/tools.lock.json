@@ -1,0 +1,18 @@
+[
+  {
+    "repo": "MorpheApp/morphe-patches",
+    "tag": "v2.3.0-dev.8",
+    "file": "patches-2.3.0-dev.8.mpp",
+    "sha256": "1282547ca7cdfd5352119e73b31cf7c051dbf8d3ae9bd3c5319edb1c246d3331",
+    "url": "https://github.com/MorpheApp/morphe-patches/releases/download/v2.3.0-dev.8/patches-2.3.0-dev.8.mpp",
+    "api_digest_verified": true
+  },
+  {
+    "repo": "MorpheApp/morphe-desktop",
+    "tag": "v2.2.0",
+    "file": "morphe-desktop-2.2.0-all.jar",
+    "sha256": "5ca0320ee05481df1ae3afd2f003bba3ff994d11d1f66ae48811ced71355e4fe",
+    "url": "https://github.com/MorpheApp/morphe-desktop/releases/download/v2.2.0/morphe-desktop-2.2.0-all.jar",
+    "api_digest_verified": true
+  }
+]

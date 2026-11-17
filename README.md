@@ -12,6 +12,14 @@
 
 **StayX is an independent customization project.** This repository publishes the build scripts, branding assets, configuration, and custom modifications used to create StayX. It is not the original YouTube source code and is not affiliated with Google, YouTube, Morphe, ReVanced, or YTDLnis.
 
+## Android mobile 1.1.0
+
+[Download the updated APK](https://github.com/karthik-cracking/StayX/releases/tag/v1.1.0) · [Current build source](android-mobile/README.md) · [Update guide](android-mobile/INSTALL.md)
+
+The mobile update switches to the explicitly supported YouTube **21.30.216** base with Morphe **2.3.0-dev.8**, enables background-playback defaults, restores compatibility with the test phone's existing MicroG, and replaces the M startup animation with the StayX SX settings logo. The original YouTube launcher icon is preserved. Playback/background audio were confirmed on one Android 16 phone; the final startup update was visually checked. **Casting is disabled in this variant.** Existing background settings may need changing after updating.
+
+The release is experimental. Its Android version name remains `21.30.216`; the StayX release number is `1.1.0`. Use the recipe in `android-mobile/` for this version. The root `scripts/` and the older pinned build instructions below describe the historical 1.0.0 release.
+
 ## Android TV and Fire TV
 
 [StayX TV](tv/README.md) keeps YouTube's TV interface and fullscreen controls using TizenTube Cobalt, with StayX settings, ad-block controls and an optional local-download handoff to YTDLnis. ARM32 playback/settings and a completed download were tested on Fire OS 7.7.1.7. ARM64 is built but awaits device testing. The TV guide includes installation, feature limits and the complete customization/build source.
@@ -39,7 +47,7 @@ The public iOS package contains the customization script and documentation. Supp
 
 The app keeps the **original YouTube launcher icon** with the name **StayX**. StayX branding appears inside the app. Its settings icon uses a transparent SX silhouette, avoiding Android's white-square tinting problem.
 
-New feature switches default to off; ad/download functionality is retained. Some changes require restarting the app. Theme colors use selectors rather than a single master switch.
+Most optional switches default to off; ad/download functionality is retained. In mobile 1.1.0, normal and Shorts background playback are enabled by default; saved preferences take precedence. Some changes require restarting the app. Theme colors use selectors rather than a single master switch.
 
 ## Install and use
 
@@ -51,14 +59,14 @@ Downloads use the separately installed [YTDLnis](https://github.com/deniscerri/y
 
 A compatible MicroG installation is needed for this non-root customization. The development device already had MicroG installed; the project does not bundle or silently replace it.
 
-## Compatibility and limits
+## Historical mobile 1.0.0 compatibility and limits
 
 - Pinned input: **YouTube 21.42.243**, Android API 29+.
 - Patches: **Morphe 1.48.0-dev.15**; patcher: **Morphe Desktop 1.18.1**; resources: **Apktool 3.0.3**.
 - The upstream patches list experimental support for **21.42.241**, so the exact 21.42.243 input uses a compatibility override. The build script checks the input's SHA-256 before allowing it.
 - Tested on **one Realme RMX3853 phone**. This is not a claim of support for every Android device, video, account, or ad format.
 - Tests covered installation, launch, playback, a complete 360p MP4 download, feature-switch changes, theme application after restart, and launcher/settings artwork. Every combination of queue, gestures, PiP, background playback and SponsorBlock categories has not been exhaustively tested.
-- Android TV / Fire TV work is a separate investigation and is currently on hold.
+- Android TV / Fire TV uses the separate implementation in [tv/](tv/README.md).
 
 ## Build locally
 

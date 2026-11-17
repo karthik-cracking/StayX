@@ -1,0 +1,22 @@
+{
+  "base_version": "21.30.216",
+  "base_sha256": "3775a15129dcc4e5b80fc17b7e0841b7fdd1ca89a6e72baa798806f666c74d02",
+  "morphe_desktop": "2.2.0",
+  "morphe_patches": "2.3.0-dev.8",
+  "patch_source": "https://github.com/MorpheApp/morphe-patches/tree/v2.3.0-dev.8",
+  "package": "com.tubemod.android.youtube",
+  "versionCode": 1561304942,
+  "versionName": "21.30.216",
+  "compatibility_override_used": false,
+  "background_default": true,
+  "shorts_background_allowed_default": true,
+  "optional_off_keys": 260,
+  "existing_preferences_migrated": false,
+  "signing_material_included": false,
+  "legacy_cast_guard": true,
+  "casting_available": false,
+  "cast_guard_fingerprint": "Error fetching CastContext.",
+  "cast_guard_method": "Lamvm;->a(Lurz;)V",
+  "tested_signed_apk_sha256": "757d7343908fe00bdacaddc6b79fb0c8b0900815f68338c76a8f95c626c56466",
+  "runtime_validation": "Initial three-minute settings, normal video and PiP observation passed; broader/background validation pending."
+}

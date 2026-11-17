@@ -1,0 +1,414 @@
+[
+    {
+        "meta": {
+            "created_at": "2026-11-16T10:31:13.009181800Z",
+            "source": "patches-2.3.0-dev.8.mpp",
+            "sha256": "1282547ca7cdfd5352119e73b31cf7c051dbf8d3ae9bd3c5319edb1c246d3331"
+        },
+        "patches": {
+            "Clone app": {
+                "enabled": false,
+                "options": {
+                    "packageName": "Default",
+                    "updatePermissions": true,
+                    "updateProviders": true
+                }
+            },
+            "Change installer source": {
+                "enabled": false,
+                "options": {
+                    "packageInstallerName": "com.android.vending"
+                }
+            },
+            "Override certificate pinning": {
+                "enabled": false
+            },
+            "Spoof signature": {
+                "enabled": false
+            },
+            "Disable Play Store updates": {
+                "enabled": false
+            },
+            "Hide ads": {
+                "enabled": true
+            },
+            "Ask flyout menu": {
+                "enabled": true
+            },
+            "Autoplay control": {
+                "enabled": true
+            },
+            "Channel search": {
+                "enabled": true
+            },
+            "Disable continue watching prompt": {
+                "enabled": true
+            },
+            "Copy text": {
+                "enabled": true
+            },
+            "Copy video link": {
+                "enabled": true
+            },
+            "Remove viewer discretion dialog": {
+                "enabled": true
+            },
+            "Disable double tap actions": {
+                "enabled": true
+            },
+            "Double tap to seek": {
+                "enabled": true
+            },
+            "Downloads": {
+                "enabled": true
+            },
+            "Feed video actions": {
+                "enabled": true
+            },
+            "Disable haptic feedback": {
+                "enabled": true
+            },
+            "Loop count": {
+                "enabled": true
+            },
+            "Loop video": {
+                "enabled": true
+            },
+            "On-the-go player": {
+                "enabled": true
+            },
+            "Change picture-in-picture actions": {
+                "enabled": true
+            },
+            "Picture-in-picture button": {
+                "enabled": true
+            },
+            "Play all": {
+                "enabled": true
+            },
+            "Playlist improvements": {
+                "enabled": true
+            },
+            "Playlist button": {
+                "enabled": true
+            },
+            "Download post images": {
+                "enabled": true
+            },
+            "Translate posts": {
+                "enabled": true
+            },
+            "Reload video": {
+                "enabled": true
+            },
+            "Save to Watch later": {
+                "enabled": true
+            },
+            "Search comments": {
+                "enabled": true
+            },
+            "Seekbar": {
+                "enabled": true
+            },
+            "Skip live Shorts": {
+                "enabled": true
+            },
+            "Swipe controls": {
+                "enabled": true
+            },
+            "Force animations": {
+                "enabled": true
+            },
+            "Custom branding": {
+                "enabled": true,
+                "options": {
+                    "customName": null,
+                    "customIcon": null,
+                    "appIcon": null
+                }
+            },
+            "Change header": {
+                "enabled": true,
+                "options": {
+                    "custom": null
+                }
+            },
+            "Hide video action buttons": {
+                "enabled": true
+            },
+            "Navigation bar": {
+                "enabled": true,
+                "options": {
+                    "hideSearchAppShortcut": false,
+                    "hideSubscriptionsAppShortcut": false
+                }
+            },
+            "Hide player overlay buttons": {
+                "enabled": true
+            },
+            "Captions": {
+                "enabled": true
+            },
+            "DeArrow": {
+                "enabled": true
+            },
+            "Disable layout updates": {
+                "enabled": true
+            },
+            "Feed card layout": {
+                "enabled": true
+            },
+            "Disable auto feed refresh": {
+                "enabled": true
+            },
+            "Feed view count": {
+                "enabled": true
+            },
+            "Add to queue": {
+                "enabled": true
+            },
+            "Custom font": {
+                "enabled": true
+            },
+            "Change form factor": {
+                "enabled": true
+            },
+            "Ambient mode": {
+                "enabled": true
+            },
+            "Hide autoplay preview": {
+                "enabled": true
+            },
+            "Hide end screen cards": {
+                "enabled": true
+            },
+            "Hide end screen suggested video": {
+                "enabled": true
+            },
+            "Hide layout components": {
+                "enabled": true
+            },
+            "Hide info cards": {
+                "enabled": true
+            },
+            "Hide player flyout menu components": {
+                "enabled": true
+            },
+            "Disable player popup panels": {
+                "enabled": true
+            },
+            "Hide related video overlay": {
+                "enabled": true
+            },
+            "Hide related videos": {
+                "enabled": true
+            },
+            "Disable rolling number animations": {
+                "enabled": true
+            },
+            "Settings menu filter": {
+                "enabled": true
+            },
+            "Hide Shorts components": {
+                "enabled": true,
+                "options": {
+                    "hideShortsAppShortcut": false,
+                    "hideShortsWidget": false
+                }
+            },
+            "Disable sign in to TV popup": {
+                "enabled": true
+            },
+            "Hide timestamp": {
+                "enabled": true
+            },
+            "Translate live chat": {
+                "enabled": true
+            },
+            "Open channel of live avatar": {
+                "enabled": true
+            },
+            "Miniplayer": {
+                "enabled": true
+            },
+            "Override YouTube Music buttons": {
+                "enabled": true
+            },
+            "Niconico comments": {
+                "enabled": true
+            },
+            "Restore original titles": {
+                "enabled": true
+            },
+            "Playback in feeds": {
+                "enabled": true
+            },
+            "Mute button": {
+                "enabled": true
+            },
+            "Disable fullscreen gestures": {
+                "enabled": true
+            },
+            "Exit fullscreen mode": {
+                "enabled": true
+            },
+            "Force fullscreen landscape": {
+                "enabled": true
+            },
+            "Fullscreen video scale": {
+                "enabled": true
+            },
+            "Open videos fullscreen": {
+                "enabled": true
+            },
+            "Player icon style": {
+                "enabled": true,
+                "options": {
+                    "customIcons": null
+                }
+            },
+            "Custom player overlay opacity": {
+                "enabled": true
+            },
+            "Fullscreen playlist panel": {
+                "enabled": true
+            },
+            "Disable playlist autoplay": {
+                "enabled": true
+            },
+            "Return YouTube Dislike": {
+                "enabled": true
+            },
+            "Disable scrolling speed limit": {
+                "enabled": true
+            },
+            "Open system share sheet": {
+                "enabled": true
+            },
+            "Shorts autoplay": {
+                "enabled": true
+            },
+            "Shorts icon style": {
+                "enabled": true,
+                "options": {
+                    "customIcons": null
+                }
+            },
+            "Disable Shorts resuming on startup": {
+                "enabled": true
+            },
+            "Open Shorts in regular player": {
+                "enabled": true
+            },
+            "Snackbar": {
+                "enabled": true
+            },
+            "SponsorBlock": {
+                "enabled": true
+            },
+            "Change start page": {
+                "enabled": true
+            },
+            "Hide status bar": {
+                "enabled": true
+            },
+            "Theme": {
+                "enabled": true,
+                "options": {
+                    "darkThemeColor": "in-app",
+                    "lightThemeColor": "in-app"
+                }
+            },
+            "Bypass image region restrictions": {
+                "enabled": true
+            },
+            "Wide search bar": {
+                "enabled": true
+            },
+            "AI channel filter": {
+                "enabled": true
+            },
+            "Remove background playback restrictions": {
+                "enabled": true
+            },
+            "Enable debugging": {
+                "enabled": true
+            },
+            "Check watch history domain name resolution": {
+                "enabled": true
+            },
+            "GmsCore support": {
+                "enabled": true
+            },
+            "Bypass link redirects": {
+                "enabled": true
+            },
+            "Open links externally": {
+                "enabled": true
+            },
+            "Media notification controls": {
+                "enabled": true
+            },
+            "PoToken provider": {
+                "enabled": true
+            },
+            "Sanitize sharing links": {
+                "enabled": true
+            },
+            "Network proxy": {
+                "enabled": false
+            },
+            "Disable QUIC protocol": {
+                "enabled": true
+            },
+            "App refresh rate": {
+                "enabled": true
+            },
+            "Spoof video streams": {
+                "enabled": true
+            },
+            "Spoof app version": {
+                "enabled": true
+            },
+            "Spoof device dimensions": {
+                "enabled": true
+            },
+            "Channel whitelist": {
+                "enabled": true
+            },
+            "Disable DRC audio": {
+                "enabled": true
+            },
+            "Force original audio": {
+                "enabled": true
+            },
+            "Skip silence": {
+                "enabled": true
+            },
+            "Playback buffer": {
+                "enabled": true
+            },
+            "Disable video codecs": {
+                "enabled": true
+            },
+            "Video delay": {
+                "enabled": true
+            },
+            "Remember live stream playback position": {
+                "enabled": true
+            },
+            "Video quality": {
+                "enabled": true
+            },
+            "Series tracking": {
+                "enabled": true
+            },
+            "Playback speed": {
+                "enabled": true
+            },
+            "Voice over translation": {
+                "enabled": true
+            }
+        }
+    }
+]

@@ -1,0 +1,839 @@
+Index: 0
+Name: Clone app
+Description: Changes the app package name to allow installing the same app multiple times. By default ".morphe" is appended to the package name. Each cloned install must use a unique package name. Cloning does not work with all apps and using this patch may cause app crashes or other unexpected behavior.
+Enabled: false
+Options:
+	Title: packageName
+	Description: Package name to use for the cloned app.
+	Required: true
+	Key: packageName
+	Default: Default
+	Possible values:
+		Default (Default)
+	Type: String
+	
+	Title: updatePermissions
+	Description: Update custom permissions declared by the app. Fixes installation conflicts, but can break features in certain apps.
+	Required: false
+	Key: updatePermissions
+	Default: true
+	Type: Boolean
+	
+	Title: updateProviders
+	Description: Update provider names declared by the app. Fixes installation conflicts, but can break features in certain apps.
+	Required: false
+	Key: updateProviders
+	Default: true
+	Type: Boolean
+
+Index: 1
+Name: Change installer source
+Description: Spoofs the installer source so the app appears to be installed from an app store.
+Enabled: false
+Options:
+	Title: packageInstallerName
+	Required: false
+	Key: packageInstallerName
+	Default: com.android.vending
+	Possible values:
+		com.android.vending (Google Play)
+		com.sec.android.app.samsungapps (Samsung Galaxy Store)
+		com.amazon.venezia (Amazon Appstore)
+		com.huawei.appmarket (Huawei AppGallery)
+		com.xiaomi.mipicks (Xiaomi GetApps)
+	Type: String
+
+Index: 2
+Name: Override certificate pinning
+Description: Overrides certificate pinning, allowing to inspect traffic via a proxy.
+Enabled: false
+
+Index: 3
+Name: Spoof signature
+Description: Spoofs the package signature of the original APK.
+Enabled: false
+
+Index: 4
+Name: Disable Play Store updates
+Description: Disables Play Store updates by setting the version code to the maximum allowed. This patch may cause unexpected issues with some apps and does not work if the app is installed by root mounting
+Enabled: false
+
+Index: 94
+Name: Hide ads
+Description: Adds options to hide general ads, Premium promotions and video ads.
+Enabled: true
+
+Index: 95
+Name: Ask flyout menu
+Description: Adds a video menu entry that opens Ask for the video and summarizes the video. This patch works with YouTube 21.16.256 and newer.
+Enabled: true
+
+Index: 96
+Name: Autoplay control
+Description: Adds a player button and a rule for the next video: playlists and queues go on, a Mix stops after a number of videos, a suggested video never plays.
+Enabled: true
+
+Index: 97
+Name: Channel search
+Description: Adds an option to search inside the channel that is currently open instead of searching all of YouTube.
+Enabled: true
+
+Index: 98
+Name: Disable continue watching prompt
+Description: Adds an option to keep autoplay going instead of pausing with a "Continue watching" prompt after a period of inactivity, or to always show the autoplay countdown at the end of the video.
+Enabled: true
+
+Index: 99
+Name: Copy text
+Description: Adds options to copy the video title and comments, and to select text of video descriptions and posts, by tapping and holding them.
+Enabled: true
+
+Index: 100
+Name: Copy video link
+Description: Adds options to display buttons in the video player to copy video links.
+Enabled: true
+
+Index: 101
+Name: Remove viewer discretion dialog
+Description: Adds an option to remove the dialog that appears when opening a video that has been age-restricted by accepting it automatically. This does not bypass the age restriction.
+Enabled: true
+
+Index: 102
+Name: Disable double tap actions
+Description: Adds an option to disable player double tap gestures.
+Enabled: true
+
+Index: 103
+Name: Double tap to seek
+Description: Adds additional double-tap to seek values to the YouTube settings menu.
+Enabled: true
+
+Index: 104
+Name: Downloads
+Description: Adds support to download videos with an external downloader app using the in-app download button or a video player action button, adds an option to download videos in-app, and exports saved videos to the device.
+Enabled: true
+
+Index: 105
+Name: Feed video actions
+Description: Adds a Watch later button to video thumbnails in feeds, and opens the video menu by tapping and holding anywhere on a video.
+Enabled: true
+
+Index: 106
+Name: Disable haptic feedback
+Description: Adds an option to disable haptic feedback in the player for various actions.
+Enabled: true
+
+Index: 107
+Name: Loop count
+Description: Adds a player settings menu item to choose how many times the app loops a video, before it plays the next video. In a playlist, the loop count is remembered for each video.
+Enabled: true
+
+Index: 108
+Name: Loop video
+Description: Adds an option to loop videos and display loop video button in the video player.
+Enabled: true
+
+Index: 109
+Name: On-the-go player
+Description: Adds an option to open a panel with large playback controls from the On-the-go item of the video player menu. While the panel is open, the lock screen media controls have seek buttons.
+Enabled: true
+
+Index: 110
+Name: Change picture-in-picture actions
+Description: Adds options to change the buttons shown in picture-in-picture mode.
+Enabled: true
+
+Index: 111
+Name: Picture-in-picture button
+Description: Adds an option to display a picture-in-picture button in the video player.
+Enabled: true
+
+Index: 112
+Name: Play all
+Description: Adds an option to play all the videos from a channel and to display play all button in the video player.
+Enabled: true
+
+Index: 113
+Name: Playlist improvements
+Description: Adds options to widen playlist drag handles, reorder videos by long press, and hide removal confirmations.
+Enabled: true
+
+Index: 114
+Name: Playlist button
+Description: Adds an option to display a button in the video player that opens the playlist panel.
+Enabled: true
+
+Index: 115
+Name: Download post images
+Description: Adds a button and a menu item to download the images and GIFs of posts.
+Enabled: true
+
+Index: 116
+Name: Translate posts
+Description: Adds a menu item to translate the text of posts.
+Enabled: true
+
+Index: 117
+Name: Reload video
+Description: Adds an option to display reload video button in the video player.
+Enabled: true
+
+Index: 118
+Name: Save to Watch later
+Description: Adds an option to display save to Watch later button in the video player, and adds a setting to redirect Watch later saves to a playlist of your choice.
+Enabled: true
+
+Index: 119
+Name: Search comments
+Description: Adds a button to the comments to show only the loaded comments that contain the searched words.
+Enabled: true
+
+Index: 120
+Name: Seekbar
+Description: Adds options to show old seekbar thumbnails, disable precise seeking when swiping up on the seekbar, slide to seek instead of playing at 2x speed when pressing and holding, tapping the player seekbar to seek, hiding the video player seekbar, enabling seeking in live streams, customizing the seekbar thumb with an image or GIF, and expanding the live stream DVR duration.
+Enabled: true
+
+Index: 121
+Name: Skip live Shorts
+Description: Automatically skips live streams that appear in the Shorts feed.
+Enabled: true
+
+Index: 122
+Name: Swipe controls
+Description: Adds options to enable and configure volume and brightness swipe controls.
+Enabled: true
+
+Index: 123
+Name: Force animations
+Description: Adds an option to always turn on or off the app animations that YouTube can turn off, such as the player transitions.
+Enabled: true
+
+Index: 124
+Name: Custom branding
+Description: Adds options to change the app icon and app name. For mounted (root) installations the branding is applied while patching, because it cannot be changed from the app settings.
+Enabled: true
+Options:
+	Title: customName
+	Description: Custom app name.
+	Required: false
+	Key: customName
+	Type: String
+	
+	Title: customIcon
+	Description: 
+	            Folder with images to use as a custom icon.
+            
+	            The folder must contain one or more of the following folders, depending on the DPI of the device:
+	            - mipmap-mdpi
+	- mipmap-hdpi
+	- mipmap-xhdpi
+	- mipmap-xxhdpi
+	- mipmap-xxxhdpi
+            
+	            Each of the folders must contain all of the following files:
+	            morphe_adaptive_background_custom.png
+	morphe_adaptive_foreground_custom.png
+            
+	            The image dimensions must be as follows:
+	            - mipmap-mdpi: 108x108 px
+	- mipmap-hdpi: 162x162 px
+	- mipmap-xhdpi: 216x216 px
+	- mipmap-xxhdpi: 324x324 px
+	- mipmap-xxxhdpi: 432x432 px
+	
+	            Optionally, the path contains a 'drawable' folder with a monochrome icon file:
+	            morphe_adaptive_monochrome_custom.xml
+	
+	            Optionally, the path contains a notification icon in one of the following formats:
+	            - XML vector drawable placed in 'drawable':
+	              morphe_notification_icon_custom.xml
+	            - PNG raster images placed in the matching 'drawable-<dpi>' folders:
+	              - drawable-mdpi/morphe_notification_icon_custom.png (24x24 px)
+	- drawable-hdpi/morphe_notification_icon_custom.png (36x36 px)
+	- drawable-xhdpi/morphe_notification_icon_custom.png (48x48 px)
+	- drawable-xxhdpi/morphe_notification_icon_custom.png (72x72 px)
+	- drawable-xxxhdpi/morphe_notification_icon_custom.png (96x96 px)
+        
+	Required: false
+	Key: customIcon
+	Type: File
+	
+	Title: appIcon
+	Description: 
+	            The app icon to use, including the notification icon.
+	
+	            'Automatic' uses the custom icon if one is provided, and otherwise 'Black'.
+	            Select 'Original' to keep the icon of the unpatched app.
+	
+	            The icon can be changed later in the app settings, but only for the launcher.
+	            Android Auto, the app list of the system settings and the apk file always show
+	            the icon chosen here, and a mounted (root) installation can only change it by
+	            patching again.
+        
+	Required: false
+	Key: appIcon
+	Possible values:
+		null (Automatic)
+		original (Original)
+		black (Black)
+		dark (Dark)
+		light (Light)
+		play (Play)
+		play_black (Play black)
+		custom (Custom)
+	Type: File
+
+Index: 125
+Name: Change header
+Description: Adds an option to change the header logo in the top left corner of the app.
+Enabled: true
+Options:
+	Title: custom
+	Description: 
+	            Folder with images to use as a custom header logo.
+	
+	            The folder must contain one or more of the following folders, depending on the DPI of the device:
+	            - drawable-hdpi
+	- drawable-xhdpi
+	- drawable-xxhdpi
+	- drawable-xxxhdpi
+	
+	            Each of the folders must contain the following file(s):
+	            - morphe_header_custom_light.png
+	- morphe_header_custom_dark.png
+	
+	            Required dimensions:
+	            - drawable-hdpi: 194x72 px
+	- drawable-xhdpi: 258x96 px
+	- drawable-xxhdpi: 387x144 px
+	- drawable-xxxhdpi: 512x192 px
+        
+	Required: false
+	Key: custom
+	Type: String
+
+Index: 126
+Name: Hide video action buttons
+Description: Adds options to hide video action buttons in fullscreen and portrait modes.
+Enabled: true
+
+Index: 127
+Name: Navigation bar
+Description: Adds options to hide and change the bottom navigation bar (such as the Shorts button) and the upper navigation toolbar.
+Enabled: true
+Options:
+	Title: hideSearchAppShortcut
+	Description: Permanently hides the shortcut to open Search when long pressing the app icon in your launcher.
+	Required: false
+	Key: hideSearchAppShortcut
+	Default: false
+	Type: Boolean
+	
+	Title: hideSubscriptionsAppShortcut
+	Description: Permanently hides the shortcut to open Subscriptions when long pressing the app icon in your launcher.
+	Required: false
+	Key: hideSubscriptionsAppShortcut
+	Default: false
+	Type: Boolean
+
+Index: 128
+Name: Hide player overlay buttons
+Description: Adds options to hide the Cast button, the player Autoplay, Captions, Previous & Next buttons, and to hide or change the opacity of the player control buttons background.
+Enabled: true
+
+Index: 129
+Name: Captions
+Description: Adds options to disable captions from being automatically enabled, select a preferred and a secondary caption language, add more auto-translate languages, and show captions in stable blocks and in picture-in-picture. Stable blocks and bilingual captions work with YouTube 21.15 and newer, on Android 10 and newer.
+Enabled: true
+
+Index: 130
+Name: DeArrow
+Description: Adds options to replace video thumbnails and titles using the DeArrow API, or replace video thumbnails with image captures from the video.
+Enabled: true
+
+Index: 131
+Name: Disable layout updates
+Description: Adds an option to disable server side layout updates and use an older UI.
+Enabled: true
+
+Index: 132
+Name: Feed card layout
+Description: Adds an option to show or hide the card layout of feed videos, which YouTube sends as an A/B test.
+Enabled: true
+
+Index: 133
+Name: Disable auto feed refresh
+Description: Adds an option to stop feeds from refreshing automatically after they become outdated.
+Enabled: true
+
+Index: 134
+Name: Feed view count
+Description: Adds the view count to the bottom left of the thumbnails of feed videos.
+Enabled: true
+
+Index: 135
+Name: Add to queue
+Description: Adds a video queue to the feed flyout menu, using either the Morphe queue or a native queue that uses YouTube's playlist interface.
+Enabled: true
+
+Index: 136
+Name: Custom font
+Description: Adds an option to show the app with the device system font or a custom TTF or OTF font file instead of YouTube Sans.
+Enabled: true
+
+Index: 137
+Name: Change form factor
+Description: Adds an option to change the UI appearance to a phone, tablet, or automotive device.
+Enabled: true
+
+Index: 138
+Name: Ambient mode
+Description: Adds Enhanced Ambient mode and options to force Ambient mode on, bypass its power saving restrictions, and disable it entirely or in fullscreen.
+Enabled: true
+
+Index: 139
+Name: Hide autoplay preview
+Description: Adds an option to hide the autoplay preview at the end of videos.
+Enabled: true
+
+Index: 140
+Name: Hide end screen cards
+Description: Adds an option to hide suggested video cards at the end of videos.
+Enabled: true
+
+Index: 141
+Name: Hide end screen suggested video
+Description: Adds an option to hide the suggested video at the end of videos.
+Enabled: true
+
+Index: 142
+Name: Hide layout components
+Description: Adds options to hide general layout components.
+Enabled: true
+
+Index: 143
+Name: Hide info cards
+Description: Adds an option to hide info cards that creators add in the video player.
+Enabled: true
+
+Index: 144
+Name: Hide player flyout menu components
+Description: Adds options to hide menu components that appear when pressing the gear icon in the video player.
+Enabled: true
+
+Index: 145
+Name: Disable player popup panels
+Description: Adds an option to disable panels (such as live chat) from opening automatically.
+Enabled: true
+
+Index: 146
+Name: Hide related video overlay
+Description: Adds an option to hide the related video overlay shown when swiping up in fullscreen.
+Enabled: true
+
+Index: 147
+Name: Hide related videos
+Description: Adds options to hide related videos.
+Enabled: true
+
+Index: 148
+Name: Disable rolling number animations
+Description: Adds an option to disable rolling number animations of video view count, user likes, and upload time.
+Enabled: true
+
+Index: 149
+Name: Settings menu filter
+Description: Adds an option to hide items on the standard YouTube settings screen by their visible name.
+Enabled: true
+
+Index: 150
+Name: Hide Shorts components
+Description: Adds options to hide components related to Shorts.
+Enabled: true
+Options:
+	Title: hideShortsAppShortcut
+	Description: Permanently hides the shortcut to open Shorts when long pressing the app icon in your launcher.
+	Required: false
+	Key: hideShortsAppShortcut
+	Default: false
+	Type: Boolean
+	
+	Title: hideShortsWidget
+	Description: Permanently hides the launcher widget Shorts button.
+	Required: false
+	Key: hideShortsWidget
+	Default: false
+	Type: Boolean
+
+Index: 151
+Name: Disable sign in to TV popup
+Description: Adds options to disable the popups asking to sign into or connect to a TV on the same local network.
+Enabled: true
+
+Index: 152
+Name: Hide timestamp
+Description: Adds an option to hide the timestamp in the bottom left of the video player.
+Enabled: true
+
+Index: 153
+Name: Translate live chat
+Description: Adds an option to translate live chat and live chat replay messages.
+Enabled: true
+
+Index: 154
+Name: Open channel of live avatar
+Description: Adds an option to prevent a channel's current live video from opening when tapping its avatar.
+Enabled: true
+
+Index: 155
+Name: Miniplayer
+Description: Adds options to change the in-app minimized player. Patching 21.28.208 and lower has more miniplayer types to choose from.
+Enabled: true
+
+Index: 156
+Name: Override YouTube Music buttons
+Description: Overrides YouTube Music buttons to open Morphe Music or any compatible third-party client.
+Enabled: true
+
+Index: 157
+Name: Niconico comments
+Description: Adds an option to show live chat and chat replay as comments that scroll across the video.
+Enabled: true
+
+Index: 158
+Name: Restore original titles
+Description: Adds an option to show the original video titles, video descriptions and channel descriptions instead of the auto-translated ones.
+Enabled: true
+
+Index: 159
+Name: Playback in feeds
+Description: Adds the 'Playback in feeds' setting of YouTube to the Morphe settings, where it is always available even if YouTube hides it.
+Enabled: true
+
+Index: 160
+Name: Mute button
+Description: Adds an option to show a player button that mutes the video audio.
+Enabled: true
+
+Index: 161
+Name: Disable fullscreen gestures
+Description: Adds options to selectively disable gestures for entering and exiting fullscreen mode, and to disable pinch-to-zoom.
+Enabled: true
+
+Index: 162
+Name: Exit fullscreen mode
+Description: Adds options to automatically exit fullscreen mode when a video reaches the end.
+Enabled: true
+
+Index: 163
+Name: Force fullscreen landscape
+Description: Adds an option to rotate the player to landscape when entering fullscreen mode on tablets and other large screen devices.
+Enabled: true
+
+Index: 164
+Name: Fullscreen video scale
+Description: Adds options to stretch or zoom videos to fill the screen in fullscreen mode.
+Enabled: true
+
+Index: 165
+Name: Open videos fullscreen
+Description: Adds options to automatically open videos in fullscreen portrait or landscape mode.
+Enabled: true
+
+Index: 166
+Name: Player icon style
+Description: Adds an option to change the style of the player button icons.
+Enabled: true
+Options:
+	Title: customIcons
+	Description: 
+	    Zip file with icons to use as the 'Custom' icon style.
+	
+	    Each icon is named after the icon it replaces, such as 'morphe_yt_copy.xml'.
+	    An icon is a vector drawable (.xml), or a white square PNG image (.png, 96x96 pixels is recommended).
+	    Icons missing from the file keep the 'Automatic' style.
+	
+	Required: false
+	Key: customIcons
+	Type: File
+
+Index: 167
+Name: Custom player overlay opacity
+Description: Adds an option to change the opacity of the video player background when player controls are visible.
+Enabled: true
+
+Index: 168
+Name: Fullscreen playlist panel
+Description: Adds an option to show the playlist panel over the fullscreen player on tablets, instead of exiting fullscreen.
+Enabled: true
+
+Index: 169
+Name: Disable playlist autoplay
+Description: Adds an option to stop a playlist from automatically advancing to the next video.
+Enabled: true
+
+Index: 170
+Name: Return YouTube Dislike
+Description: Adds an option to show the dislike count of videos with Return YouTube Dislike, and the like count and like ratio on the thumbnails of feed videos.
+Enabled: true
+
+Index: 171
+Name: Disable scrolling speed limit
+Description: Adds an option to remove limits of how fast the home and subscription feed can be scrolled.
+Enabled: true
+
+Index: 172
+Name: Open system share sheet
+Description: Adds an option to always open the system share sheet instead of the in-app share sheet.
+Enabled: true
+
+Index: 173
+Name: Shorts autoplay
+Description: Adds options to automatically play the next Short.
+Enabled: true
+
+Index: 174
+Name: Shorts icon style
+Description: Adds an option to change the style of the Shorts action button icons.
+Enabled: true
+Options:
+	Title: customIcons
+	Description: 
+	    Zip file with icons to use as the 'Custom' icon style.
+	
+	    Each icon is named after the icon it replaces, such as 'morphe_shorts_heart.xml'.
+	    An icon is a vector drawable (.xml), or a white square PNG image (.png, 96x96 pixels is recommended).
+	    Icons missing from the file keep the 'Automatic' style.
+	
+	Required: false
+	Key: customIcons
+	Type: File
+
+Index: 175
+Name: Disable Shorts resuming on startup
+Description: Adds an option to disable Shorts from resuming on app startup when Shorts were last being watched.
+Enabled: true
+
+Index: 176
+Name: Open Shorts in regular player
+Description: Adds options to open Shorts in the regular video player.
+Enabled: true
+
+Index: 177
+Name: Snackbar
+Description: Adds options to hide the snackbar or change its colors and shape.
+Enabled: true
+
+Index: 178
+Name: SponsorBlock
+Description: Adds options to enable and configure SponsorBlock, which can skip undesired video segments such as sponsored content.
+Enabled: true
+
+Index: 179
+Name: Change start page
+Description: Adds an option to set which page the app opens in instead of the homepage.
+Enabled: true
+
+Index: 180
+Name: Hide status bar
+Description: Adds an option to hide the system status bar. Swipe down from the top edge to show it for a moment.
+Enabled: true
+
+Index: 181
+Name: Theme
+Description: Adds options for theming, and settings to change the app foreground and background colors.
+Enabled: true
+Options:
+	Title: darkThemeColor
+	Description: Can be a hex color (#RRGGBB) or a color resource reference. Setting a color of either theme applies both while patching and removes the in-app theme color settings.
+	Required: false
+	Key: darkThemeColor
+	Default: in-app
+	Possible values:
+		in-app (Change in the app)
+		@android:color/black (Pure black)
+		@android:color/system_neutral1_900 (Material You (Neutral))
+		@android:color/system_accent1_800 (Material You (Primary))
+		@android:color/system_accent2_800 (Material You (Secondary))
+		@android:color/system_accent3_800 (Material You (Tertiary))
+		#0F0F0F (Modern YouTube)
+		#212121 (Classic YouTube)
+		#181825 (Catppuccin (Mocha))
+		#290025 (Dark pink)
+		#001029 (Dark blue)
+		#002905 (Dark green)
+		#282900 (Dark yellow)
+		#291800 (Dark orange)
+		#290000 (Dark red)
+	Type: String
+	
+	Title: lightThemeColor
+	Description: Can be a hex color (#RRGGBB) or a color resource reference. Setting a color of either theme applies both while patching and removes the in-app theme color settings.
+	Required: false
+	Key: lightThemeColor
+	Default: in-app
+	Possible values:
+		in-app (Change in the app)
+		@android:color/white (White)
+		@android:color/system_neutral1_100 (Material You (Neutral))
+		@android:color/system_accent1_200 (Material You (Primary))
+		@android:color/system_accent2_200 (Material You (Secondary))
+		@android:color/system_accent3_200 (Material You (Tertiary))
+		#E6E9EF (Catppuccin (Latte))
+		#FCCFF3 (Light pink)
+		#D1E0FF (Light blue)
+		#CCFFCC (Light green)
+		#FDFFCC (Light yellow)
+		#FFE6CC (Light orange)
+		#FFD6D6 (Light red)
+	Type: String
+
+Index: 182
+Name: Bypass image region restrictions
+Description: Adds an option to use a different host for user avatar and channel images and can fix missing images that are blocked in some countries.
+Enabled: true
+
+Index: 183
+Name: Wide search bar
+Description: Adds a wide search bar to the top of the home and subscription feed.
+Enabled: true
+
+Index: 184
+Name: AI channel filter
+Description: Adds options to hide videos from channels flagged as AI-generated by the AiSList community list and to report AI channels from the video menu.
+Enabled: true
+
+Index: 185
+Name: Remove background playback restrictions
+Description: Removes restrictions on background playback, including playing kids videos in the background.
+Enabled: true
+
+Index: 186
+Name: Enable debugging
+Description: Adds options for debugging and exporting Morphe logs to the clipboard.
+Enabled: true
+
+Index: 187
+Name: Check watch history domain name resolution
+Description: Checks if the device DNS server is preventing user watch history from being saved.
+Enabled: true
+
+Index: 188
+Name: GmsCore support
+Description: Allows the app to work without root by using a different package name when patched using a GmsCore instead of Google Play Services.
+Enabled: true
+
+Index: 189
+Name: Bypass link redirects
+Description: Adds an option to bypass redirects and open the original link directly.
+Enabled: true
+
+Index: 190
+Name: Open links externally
+Description: Adds an option to always open links in your browser instead of with the in-app browser.
+Enabled: true
+
+Index: 191
+Name: Media notification controls
+Description: Adds options to disable the seekbar and previous/next buttons in the media notification and headphone controls.
+Enabled: true
+
+Index: 192
+Name: PoToken provider
+Description: Adds option to get PoToken using an external PoToken minter app.
+Enabled: true
+
+Index: 193
+Name: Sanitize sharing links
+Description: Removes the tracking query parameters from shared links.
+Enabled: true
+
+Index: 194
+Name: Network proxy
+Description: Adds settings to route supported network requests through an HTTP or HTTPS proxy. Including this patch may cause connectivity problems on certain devices
+Enabled: false
+
+Index: 195
+Name: Disable QUIC protocol
+Description: Adds an option to disable QUIC (Quick UDP Internet Connections) network protocol.
+Enabled: true
+
+Index: 196
+Name: App refresh rate
+Description: Adds an option to change the app refresh rate.
+Enabled: true
+
+Index: 197
+Name: Spoof video streams
+Description: Adds options to spoof the client video streams to fix playback.
+Enabled: true
+
+Index: 198
+Name: Spoof app version
+Description: Adds an option to trick the app into thinking you are running an older version.
+Enabled: true
+
+Index: 199
+Name: Spoof device dimensions
+Description: Adds an option to spoof the device dimensions which can unlock higher video qualities.
+Enabled: true
+
+Index: 200
+Name: Channel whitelist
+Description: Adds options to allow whitelisting specific channels to show ads or override playback speeds.
+Enabled: true
+
+Index: 201
+Name: Disable DRC audio
+Description: Adds an option to disable DRC (Dynamic Range Compression) audio.
+Enabled: true
+
+Index: 202
+Name: Force original audio
+Description: Adds an option to always use the original audio track.
+Enabled: true
+
+Index: 203
+Name: Skip silence
+Description: Adds an option to automatically skip silent pauses in audio playback.
+Enabled: true
+
+Index: 204
+Name: Playback buffer
+Description: Adds an option to change the video playback buffer size.
+Enabled: true
+
+Index: 205
+Name: Disable video codecs
+Description: Adds options to disable or force HDR, and to disable VP9 or AV1 codecs.
+Enabled: true
+
+Index: 206
+Name: Video delay
+Description: Adds an option to delay the video, to keep it in sync with laggy Bluetooth audio.
+Enabled: true
+
+Index: 207
+Name: Remember live stream playback position
+Description: Adds an option to remember the playback position of an ongoing live stream and resume from there when reopening that live stream.
+Enabled: true
+
+Index: 208
+Name: Video quality
+Description: Adds options to set default video qualities and always use the advanced video quality menu.
+Enabled: true
+
+Index: 209
+Name: Series tracking
+Description: Adds a series library to History with local progress and episode continuation. This patch works with YouTube 21.02 and newer.
+Enabled: true
+
+Index: 210
+Name: Playback speed
+Description: Adds options to customize available playback speeds, set a default playback speed, and show a speed dialog button in the video player.
+Enabled: true
+
+Index: 211
+Name: Voice over translation
+Description: Adds additional voice over languages using text-to-speech synchronized to the video playback.
+Enabled: true
