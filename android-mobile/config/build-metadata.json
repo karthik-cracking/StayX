@@ -17,6 +17,9 @@
   "casting_available": false,
   "cast_guard_fingerprint": "Error fetching CastContext.",
   "cast_guard_method": "Lamvm;->a(Lurz;)V",
-  "tested_signed_apk_sha256": "757d7343908fe00bdacaddc6b79fb0c8b0900815f68338c76a8f95c626c56466",
-  "runtime_validation": "Initial three-minute settings, normal video and PiP observation passed; broader/background validation pending."
+  "tested_signed_apk_sha256": "47f1a1f0e189fdce8daeed5a284caa6ff682141138c57db1c9cae58da4b94397",
+  "runtime_validation": "Installed update and verified installed hash on Realme RMX3853 Android 16; final SX startup visually checked. Prior playback build passed normal playback, PiP and screen-off checks; owner confirmed playback/background audio after video and Shorts tests.",
+  "stayx_release": "1.1.0",
+  "startup_logo": "StayX settings SX logo",
+  "rive_startup_bypassed": true
 }
